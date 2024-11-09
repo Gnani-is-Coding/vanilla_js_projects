@@ -40,19 +40,19 @@ p {
 }
 
 .submit {
-    background-color: #2ecc71;
+    background-color: #2ecc71 !important
 }
 
 .failed {
-    background-color: #e74c3c;
+    background-color: #e74c3c !important
 }
 
 .information {
-    background-color: #3498db;
+    background-color: #3498db !important
 }
 
 .warning {
-    background-color: #f1c40f;
+    background-color: #f1c40f !important
 }
 
 .toast-notifications {
@@ -66,22 +66,31 @@ p {
     padding: 1.5rem;
     text-align: center;
     font-family: 'Bree Serif';
-    transition: transform 4s;
-    /* transform: translate(calc(100% + 25px)); */
+    transition: transform 0.3s;
+    animation: slideIn 0.5s ease-in-out
 }
 
-/* @keyframes btnClick {
+.progress {
+    width: 1%;
+    height: 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #3498db;
+}
+
+
+@keyframes slideIn {
     0% {
-        transform: scale(1);
+        transform: translate(calc(100% + 25px));
     }
 
-    50% {
-        transform: scale(0.9);
-
+    25% {
+        transform: translate(-10%);
     }
 
     100% {
-        transform: scale(1);
-
+        transform: translate(0%);
     }
-} */
+}
